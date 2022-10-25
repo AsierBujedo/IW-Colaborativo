@@ -10,7 +10,7 @@ class Cine(models.Model):
 class Sala(models.Model):
     num_asientos = models.IntegerField()
     categoria = models.CharField(max_length=50)
-    id_cine = models.ForeignKey(Cine, on_delete=models.)
+    id_cine = models.ForeignKey(Cine, on_delete=models.CASCADE)
 class Pelicula(models.Model):
     titulo = models.CharField(max_length=50)
     fecha_estreno = models.DateField()

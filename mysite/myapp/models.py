@@ -17,9 +17,9 @@ class Sala(models.Model):
     categoria = models.CharField(max_length=50)
     id_cine = models.ForeignKey(Cine, on_delete=models.CASCADE)
     
-class Director(models.model):
+class Director(models.Model):
     id_director = models.IntegerField().primary_key
-    nombre = models.CharField(max_lenght=50)
+    nombre = models.CharField(max_length=50)
     fecha_nto = models.DateField()
 
 class Pelicula(models.Model):

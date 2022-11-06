@@ -1,6 +1,6 @@
 from contextlib import nullcontext
 from . import views
-from models import *
+from .models import *
 from django.shortcuts import render
 
 # Create your views here.

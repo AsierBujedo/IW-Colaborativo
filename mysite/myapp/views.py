@@ -8,7 +8,6 @@ from django.shortcuts import render
 def index(request):
     cines = Cine.objects.all()
 
-
     context = {
         'cines': cines
     }
@@ -26,11 +25,11 @@ def cines(request):
 
 def cine(request, id_cine):
     cine = Cine.objects.get(pk=id_cine)
-    salas = Sala.objects.filter(id_cine, id_cine)
+    #salas =
 
     context = {
         'cine': cine,
-        'salas': salas
+        #'salas': salas
     }
 
     return render(request, 'cine.html', context)
@@ -46,9 +45,11 @@ def salas(request):
 
 def sala(request, id_sala):
     sala = Sala.objects.get(pk=id_sala)
+    #peliculas =
 
     context = {
         'sala': sala
+        #'peliculas': peliculas
     }
 
     return render(request, 'sala.html', context)

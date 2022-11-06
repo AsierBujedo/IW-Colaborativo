@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>DeustoCines | Pelicula</title>
+</head>
+
+<body>
+    <p><strong>ID:</strong> {{ pelicula.id }}<strong>Título:</strong> {{ pelicula.titulo }}<strong>Fecha de estreno:</strong> {{ pelicula.fecha_estreno }}<strong>Longitud en minutos:</strong> {{ pelicula.longitud_mins }}<strong>ID director:</strong> <a href="">{{ pelicula.id_director.nombre }}</a></p>
+    <ul>
+        {% for actor in actores %}
+            <li>
+                <p><a href="">{{ actor.nombre }}</a></p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

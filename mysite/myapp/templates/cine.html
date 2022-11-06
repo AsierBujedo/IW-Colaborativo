@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | Cine</title>
+    <title>DeustoCines | Cine {{ cine.id }}</title>
 </head>
 
 <body>
@@ -11,7 +11,7 @@
     <ul>
         {% for sala in salas %}
             <li>
-                <p>{{ sala.num_sala }}</p>
+                <p>{{ sala.cod_sala }}</p>
             </li>
         {% endfor %}
     </ul>

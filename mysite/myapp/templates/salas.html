@@ -10,7 +10,7 @@
     <ul>
         {% for sala in salas %}
             <li>
-                <a href="/myapp/salas/{{ sala.id }}">{{ sala.num_sala }}{{ sala.id_cine }}</a>
+                <a href="/myapp/salas/{{ sala.id }}">{{ sala.cod_sala }}, {{ sala.id_cine.nombre }}</a>
             </li>
         {% endfor %}
     </ul>

@@ -12,7 +12,7 @@ class Cine(models.Model):
     
 class Sala(models.Model):
     #id_sala = models.IntegerField().primary_key
-    num_sala = models.IntegerField()
+    cod_sala = models.CharField(max_length=50)
     num_asientos = models.IntegerField()
     categoria = models.CharField(max_length=50)
     id_cine = models.ForeignKey(Cine, on_delete=models.CASCADE)

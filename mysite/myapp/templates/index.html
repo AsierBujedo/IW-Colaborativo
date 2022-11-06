@@ -12,7 +12,7 @@
     <ul>
         {% for cine in cines %}
             <li>
-                <p>{{ cine.nombre }}, sala con mayor número de asientos: </p>
+                <p>{{ cine.nombre }}, sala con mayor número de asientos: {{ cine.sala_num_max_asientos.num_sala }}</p>
             </li>
         {% endfor %}
     </ul>

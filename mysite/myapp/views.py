@@ -8,6 +8,9 @@ from django.shortcuts import render
 def index(request):
     cines = Cine.objects.order_by('nombre')
 
+    for cine in cines:
+        cine.sala_max_num_asientos = Sala.objects.filter(id_cine=cine.id_cine).order_by('-num_asientos')[0].num_asientos
+
     context = {
         'cines': cines
     }

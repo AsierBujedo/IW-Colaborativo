@@ -8,15 +8,27 @@
 
 <body>
     <ul>
+        <!--<li>
+             <p>{{ cine_1.nombre }} (Sala con mayor número de asientos: {{sala_num_max_asientos_in_cine_1.cod_sala}}, {{sala_num_max_asientos_in_cine_1.num_asientos}})</p>
+        </li>
+        <li>
+            <p>{{ cine_2.nombre }} (Sala con mayor número de asientos: {{sala_num_max_asientos_in_cine_2.cod_sala}}, {{sala_num_max_asientos_in_cine_2.num_asientos}})</p>
+        </li>
+        <li>
+            <p>{{ cine_3.nombre }} (Sala con mayor número de asientos: {{sala_num_max_asientos_in_cine_3.cod_sala}}, {{sala_num_max_asientos_in_cine_3.num_asientos}})</p>
+        </li>
+        <li>
+            <p>{{ cine_4.nombre }} (Sala con mayor número de asientos: {{sala_num_max_asientos_in_cine_4.cod_sala}}, {{sala_num_max_asientos_in_cine_4.num_asientos}})</p>
+        </li>-->
+
         {% for cine in cines %}
-            <li>
-                <p>{{ cine.nombre }}</p>
-            </li>
+            {% for sala in salas %}
+                <li>
+                    <p>{{ cine.nombre }} (Sala con mayor número de asientos: {{sala.cod_sala}}, {{sala.num_asientos}})</p>
+                </li>
+            {% endfor %}    
         {% endfor %}
     </ul>
+    
 </body>
 </html>
-
-
-
-<!--<a href="/myapp/empresa/{{ empresa.id }}/">{{ empresa.nombre }}</a>-->

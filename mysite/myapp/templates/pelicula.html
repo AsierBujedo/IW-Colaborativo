@@ -3,15 +3,24 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | Pelicula</title>
+    <title>DeustoCines | Pelicula {{ pelicula.id }}</title>
 </head>
 
 <body>
-    <p><strong>ID:</strong> {{ pelicula.id }}<strong>Título:</strong> {{ pelicula.titulo }}<strong>Fecha de estreno:</strong> {{ pelicula.fecha_estreno }}<strong>Longitud en minutos:</strong> {{ pelicula.longitud_mins }}<strong>ID director:</strong> <a href="">{{ pelicula.id_director.nombre }}</a></p>
+    <p><strong>ID:</strong> {{ pelicula.id }}<strong>Título:</strong> {{ pelicula.titulo }}<strong>Fecha de estreno:</strong> {{ pelicula.fecha_estreno }}<strong>Longitud en minutos:</strong> {{ pelicula.longitud_mins }}<strong>Director:</strong> <a href="/myapp/directores/{{ pelicula.id_director.id }}">{{ pelicula.id_director.nombre }}</a></p>
+    <h3>Actores que participan:</h3>
     <ul>
-        {% for actor in actores %}
+        {% for actor in actores_in_pelicula %}
             <li>
-                <p><a href="">{{ actor.nombre }}</a></p>
+                <p><a href="/myapp/actores/{{ actor.id }}">{{ actor.nombre }}</a></p>
+            </li>
+        {% endfor %}
+    </ul>
+    <h3>Cines en los que se proyecta:</h3>
+    <ul>
+        {% for cine in cines %}
+            <li>
+                <p>{{ cine.nombre }}</p>
             </li>
         {% endfor %}
     </ul>

@@ -8,6 +8,7 @@
 
 <body>
     <p><strong>ID:</strong> {{ cine.id }}<strong>Nombre:</strong> {{ cine.nombre }}<strong>Dirección:</strong> {{ cine.direccion }}<strong>Teléfono:</strong> {{ cine.telefono }}<strong>Número de salas:</strong> {{ cine.num_salas }}</p>
+    <h3>Salas:</h3>
     <ul>
         {% for sala in salas %}
             <li>

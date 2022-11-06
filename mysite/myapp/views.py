@@ -6,8 +6,13 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    
-    return 0
+    cines = Cine.objects.order_by('nombre')
+
+    context = {
+        'cines': cines
+    }
+
+    return render(request, 'index.html', context)
 
 def cine(request):
     

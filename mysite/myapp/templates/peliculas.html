@@ -3,20 +3,16 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines</title>
+    <title>DeustoCines | Peliculas</title>
 </head>
 
 <body>
     <ul>
-        {% for cine in cines %}
+        {% for pelicula in peliculas %}
             <li>
-                <p>{{ cine.nombre }}</p>
+                <a href="/myapp/peliculas/{{ pelicula.id }}">{{ pelicula.titulo }}</a>
             </li>
         {% endfor %}
     </ul>
 </body>
 </html>
-
-
-
-<!--<a href="/myapp/empresa/{{ empresa.id }}/">{{ empresa.nombre }}</a>-->

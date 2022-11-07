@@ -3,11 +3,11 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | Sala {{ sala.id }}</title>
+    <title>DeustoCines | {{ sala.cod_sala }} ({{ sala.id_cine.nombre }})</title>
 </head>
 
 <body>
-    <p><strong>ID:</strong> {{ sala.id }}<strong>Número:</strong> {{ sala.cod_sala }}<strong>Número de asientos:</strong> {{ sala.num_asientos }}<strong>Categoría:</strong> {{ sala.categoria }}<strong>ID cine:</strong> {{ sala.id_cine.nombre }}</p>
+    <p><strong>ID:</strong> {{ sala.id }}&nbsp&nbsp<strong>Número:</strong> {{ sala.cod_sala }}&nbsp&nbsp<strong>Número de asientos:</strong> {{ sala.num_asientos }}&nbsp&nbsp<strong>Categoría:</strong> {{ sala.categoria }}&nbsp&nbsp<strong>Cine:</strong> {{ sala.id_cine.nombre }}</p>
     <h3>Películas que se proyectan:</h3>
     <ul>
         {% for pelicula in peliculas_in_sala %}

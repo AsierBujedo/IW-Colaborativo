@@ -3,11 +3,11 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | Pelicula {{ pelicula.id }}</title>
+    <title>DeustoCines | {{ pelicula.titulo }}</title>
 </head>
 
 <body>
-    <p><strong>ID:</strong> {{ pelicula.id }}<strong>Título:</strong> {{ pelicula.titulo }}<strong>Fecha de estreno:</strong> {{ pelicula.fecha_estreno }}<strong>Longitud en minutos:</strong> {{ pelicula.longitud_mins }}<strong>Director:</strong> <a href="/myapp/directores/{{ pelicula.id_director.id }}">{{ pelicula.id_director.nombre }}</a></p>
+    <p><strong>ID:</strong> {{ pelicula.id }}&nbsp&nbsp<strong>Título:</strong> {{ pelicula.titulo }}&nbsp&nbsp<strong>Fecha de estreno:</strong> {{ pelicula.fecha_estreno }}&nbsp&nbsp<strong>Longitud en minutos:</strong> {{ pelicula.longitud_mins }}&nbsp&nbsp<strong>Director:</strong> <a href="/myapp/directores/{{ pelicula.id_director.id }}">{{ pelicula.id_director.nombre }}</a></p>
     <h3>Actores que participan:</h3>
     <ul>
         {% for actor in actores_in_pelicula %}

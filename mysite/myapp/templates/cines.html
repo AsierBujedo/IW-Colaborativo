@@ -9,9 +9,9 @@
 <body>
     <h2>Lista completa de cines:</h2>
     <ul>
-        {% for cine in cines %}
+        {% for tupla in lista %}
             <li>
-                <a href="/myapp/cines/{{ cine.id }}">{{ cine.nombre }}</a>
+                <p><a href="/myapp/cines/{{ tupla.0.id }}">{{ tupla.0.nombre }}</a>&nbsp&nbspEn cartelera: {{tupla.1.titulo}}</p>
             </li>
         {% endfor %}
     </ul>

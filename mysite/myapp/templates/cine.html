@@ -3,11 +3,11 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | Cine {{ cine.id }}</title>
+    <title>DeustoCines | {{ cine.nombre }}</title>
 </head>
 
 <body>
-    <p><strong>ID:</strong> {{ cine.id }}<strong>Nombre:</strong> {{ cine.nombre }}<strong>Dirección:</strong> {{ cine.direccion }}<strong>Teléfono:</strong> {{ cine.telefono }}<strong>Número de salas:</strong> {{ cine.num_salas }}</p>
+    <p><strong>ID:</strong> {{ cine.id }}&nbsp&nbsp<strong>Nombre:</strong> {{ cine.nombre }}&nbsp&nbsp<strong>Dirección:</strong> {{ cine.direccion }}&nbsp&nbsp<strong>Teléfono:</strong> {{ cine.telefono }}&nbsp&nbsp<strong>Número de salas:</strong> {{ cine.num_salas }}</p>
     <h3>Salas:</h3>
     <ul>
         {% for sala in salas %}

@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines</title>
-</head>
+{% block head %}
+    {% block title %}DeustoCines{% endblock title %}
+{% endblock head %}
 
-<body>
+{% block body %}
+    {% block header %}{% endblock header %}
     <ul>
         {% for tupla in lista %}
             <li>
@@ -14,5 +13,6 @@
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock body %}
+
+{% block footer %}{% endblock footer %}

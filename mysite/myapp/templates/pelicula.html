@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | {{ pelicula.titulo }}</title>
-</head>
+   
+{% block title %}DeustoCines | {{ pelicula.titulo }}{% endblock title %}
 
-<body>
+
+{% block body %}
     <p><strong>ID:</strong> {{ pelicula.id }}&nbsp&nbsp<strong>Título:</strong> {{ pelicula.titulo }}&nbsp&nbsp<strong>Fecha de estreno:</strong> {{ pelicula.fecha_estreno }}&nbsp&nbsp<strong>Longitud en minutos:</strong> {{ pelicula.longitud_mins }}&nbsp&nbsp<strong>Director:</strong> <a href="/myapp/directores/{{ pelicula.id_director.id }}">{{ pelicula.id_director.nombre }}</a></p>
     <h3>Actores que participan:</h3>
     <ul>
@@ -24,5 +22,6 @@
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock body %}
+
+{% block footer %}{% endblock footer %}

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | Actor {{ actor.id }}</title>
-</head>
 
-<body>
+{% block title %}DeustoCines | Actor {{ actor.id }}{% endblock title %}
+
+
+{% block body %}
     <p><strong>ID:</strong> {{ actor.id }}&nbsp&nbsp<strong>Nombre:</strong> {{ actor.nombre }}&nbsp&nbsp<strong>Fecha de nacimiento:</strong> {{ actor.fecha_nto }}</p>
-</body>
-</html>
+{% endblock body %}
+   

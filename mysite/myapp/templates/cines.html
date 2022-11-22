@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | Cines</title>
-</head>
+{% block title %}DeustoCines | Cines{% endblock title %}
 
-<body>
+{% block ul %}
+    <li><a href="/myapp/">Home</a></li>
+    <li><a href="/myapp/cines" class="active">Cines</a></li>
+    <li><a href="/myapp/salas">Salas</a></li>
+    <li><a href="/myapp/peliculas">Películas</a></li>
+{% endblock ul %}
+
+{% block body %}   
     <h2>Lista completa de cines:</h2>
     <ul>
         {% for tupla in lista %}
@@ -15,7 +18,6 @@
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock body %}
 
 {% comment %} {% url "show_pizza" i.id %} {% endcomment %}

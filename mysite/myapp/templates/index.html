@@ -2,7 +2,15 @@
 
 {% block title %}DeustoCines{% endblock title %}
 
+{% block ul %}
+    <li><a href="/myapp/" class="active">Home</a></li>
+    <li><a href="/myapp/cines">Cines</a></li>
+    <li><a href="/myapp/salas">Salas</a></li>
+    <li><a href="/myapp/peliculas">Películas</a></li>
+{% endblock ul %}
+
 {% block body %}
+
     <ul>
         {% for tupla in lista %}
             <li>

@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
+{%extends "base.html"%}
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | Peliculas</title>
-</head>
+{%block title%}DeustoCines | Peliculas{%endblock title%}
 
-<body>
+{%block body%}
     <h2>Lista completa de películas:</h2>
     <ul>
         {% for pelicula in peliculas %}
@@ -14,6 +10,5 @@
                 <a href="/myapp/peliculas/{{ pelicula.id }}">{{ pelicula.titulo }}</a>
             </li>
         {% endfor %}
-    </ul>
-</body>
-</html>
+   </ul>
+{%endblock body%}

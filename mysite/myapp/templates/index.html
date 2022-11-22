@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 
-{% block head %}
-    {% block title %}DeustoCines{% endblock title %}
-{% endblock head %}
+{% block title %}DeustoCines{% endblock title %}
 
 {% block body %}
-    {% block header %}{% endblock header %}
     <ul>
         {% for tupla in lista %}
             <li>
@@ -14,5 +11,3 @@
         {% endfor %}
     </ul>
 {% endblock body %}
-
-{% block footer %}{% endblock footer %}

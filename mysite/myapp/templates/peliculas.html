@@ -2,10 +2,17 @@
 
 {%block title%}DeustoCines | Peliculas{%endblock title%}
 
+{% block ul %}
+    <li><a href="/myapp/">Home</a></li>
+    <li><a href="/myapp/cines">Cines</a></li>
+    <li><a href="/myapp/salas">Salas</a></li>
+    <li><a href="/myapp/peliculas" class="active">Películas</a></li>
+{% endblock ul %}
+
 {%block body%}
     <h2>Lista completa de películas:</h2>
     <ul>
-        {% for pelicula in peliculas %}
+        {% for pelicula in pelicula_list %}
             <li>
                 <a href="/myapp/peliculas/{{ pelicula.id }}">{{ pelicula.titulo }}</a>
             </li>

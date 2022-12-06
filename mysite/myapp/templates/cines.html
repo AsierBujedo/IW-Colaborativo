@@ -12,7 +12,7 @@
 {% block body %}   
     <h2>Lista completa de cines:</h2>
     <ul>
-        {% for tupla in lista %}
+        {% for tupla in cine_list %}
             <li>
                 <p><a href="/myapp/cines/{{ tupla.0.id }}">{{ tupla.0.nombre }}</a>&nbsp&nbspEn cartelera: {{tupla.1.titulo}}</p>
             </li>

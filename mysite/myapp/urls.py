@@ -24,5 +24,5 @@ urlpatterns = [
     #localhost:8000/myapp/directores/<int:id_director>
     path('directores/<int:pk>', views.Director.as_view(), name='details_director'),
     #localhost:8000/myapp/actores/<int:id_actor>
-    path('actores/<int:pk>', views.ActorV, name='details_actor')
+    path('actores/<int:pk>', views.ActorV.as_view(), name='details_actor')
 ]

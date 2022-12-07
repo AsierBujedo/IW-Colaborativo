@@ -22,7 +22,7 @@ urlpatterns = [
     #localhost:8000/myapp/peliculas/<int:id_pelicula>
     path('peliculas/<int:id_pelicula>', views.pelicula, name='details_pelicula'),
     #localhost:8000/myapp/directores/<int:id_director>
-    path('directores/<int:pk>', views.director.as_view(), name='details_director'),
+    path('directores/<int:pk>', views.Director.as_view(), name='details_director'),
     #localhost:8000/myapp/actores/<int:id_actor>
-    path('actores/<int:id_actor>', views.actor, name='details_actor')
+    path('actores/<int:pk>', views.ActorV.as_view(), name='details_actor')
 ]

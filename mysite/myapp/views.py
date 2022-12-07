@@ -83,12 +83,12 @@ def pelicula(request, id_pelicula):
 
     return render(request, 'pelicula.html', context)
 
-class director(DetailView):
+class Director(DetailView):
     model = Director
     template_name='director.html'
     context_object_name = 'director'
 
-class actor(DetailView):
-    modelo = Actor
+class ActorV(DetailView):
+    model = Actor
     template_name='actor.html'
     context_object_name='actor'

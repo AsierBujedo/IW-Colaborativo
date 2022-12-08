@@ -13,7 +13,7 @@
     <p><strong>ID:</strong> {{ cine.id }}&nbsp&nbsp<strong>Nombre:</strong> {{ cine.nombre }}&nbsp&nbsp<strong>Dirección:</strong> {{ cine.direccion }}&nbsp&nbsp<strong>Teléfono:</strong> {{ cine.telefono }}&nbsp&nbsp<strong>Número de salas:</strong> {{ cine.num_salas }}</p>
     <h3>Salas:</h3>
     <ul>
-        {% for sala in salas %}
+        {% for sala in cine.salas.all %}
             <li>
                 <p>{{ sala.cod_sala }}</p>
             </li>

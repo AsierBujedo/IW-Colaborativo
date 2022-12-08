@@ -12,16 +12,9 @@
 {% block body %}   
     <h2>Lista completa de cines:</h2>
     <ul>
-        {% for cine in object_list %}
+        {% for tupla in cine_list %}
             <li>
-                <p><a href="/myapp/cines/{{ cine.id }}">{{ cine.nombre }}</a>&nbsp&nbspEn cartelera:</p>
-                {%for sala in cine.salas.all%}
-
-                    {% comment %} <p> {{sala.peliculas.all.1.titulo}} </p> {% endcomment %}
-                    {%for peliculas in sala.peliculas.all%}
-                    <p> {{peliculas.titulo}} </p>
-                    {%endfor%}
-                {%endfor%}
+                <p><a href="/myapp/cines/{{ tupla.0.id }}">{{ tupla.0.nombre }}</a>&nbsp&nbspEn cartelera: {{tupla.1.titulo}}</p>
             </li>
         {% endfor %}
     </ul>

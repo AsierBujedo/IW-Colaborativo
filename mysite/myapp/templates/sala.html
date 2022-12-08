@@ -13,7 +13,7 @@
     <p><strong>ID:</strong> {{ sala.id }}&nbsp&nbsp<strong>Número:</strong> {{ sala.cod_sala }}&nbsp&nbsp<strong>Número de asientos:</strong> {{ sala.num_asientos }}&nbsp&nbsp<strong>Categoría:</strong> {{ sala.categoria }}&nbsp&nbsp<strong>Cine:</strong> {{ sala.id_cine.nombre }}</p>
     <h3>Películas que se proyectan:</h3>
     <ul>
-        {% for pelicula in peliculas_in_sala %}
+        {% for pelicula in sala.peliculas.all %}
             <li>
                 <p>{{ pelicula.titulo }}</p>
             </li>

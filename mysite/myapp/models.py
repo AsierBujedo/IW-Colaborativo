@@ -31,6 +31,6 @@ class Pelicula(models.Model):
     fecha_estreno = models.DateField()
     longitud_mins = models.IntegerField()
     longitud_horas = models.IntegerField(null= True)
-    id_director = models.ForeignKey(Director, on_delete=models.CASCADE, related_name = "id_director")
+    id_director = models.ForeignKey(Director, on_delete=models.CASCADE, related_name = "peliculas")
     
     #id_director = models.ForeignKey(Director, on_delete=models.CASCADE)

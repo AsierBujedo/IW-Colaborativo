@@ -10,11 +10,10 @@
 {% endblock ul %}
 
 {% block body %}
-
     <ul>
         {% for tupla in cine_list %}
             <li>
-                 <p>{{ tupla.0.nombre }} (Sala más grande: {{tupla.1.0.cod_sala}}, {{tupla.1.0.num_asientos}} asientos)</p>
+                <p>{{ tupla.0.nombre }} (Sala más grande: {{tupla.1.0.cod_sala}}, {{tupla.1.0.num_asientos}} asientos)</p>
             </li>
         {% endfor %}
     </ul>

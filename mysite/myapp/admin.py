@@ -55,14 +55,6 @@ class CineAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'direccion', 'telefono', 'num_salas')
     inlines = [SalaInline]
 
-    def get_form(self, request, obj=None, **kwargs):
-        form = super().get_form(request, obj, **kwargs)
-        is_superuser = request.user.is_superuser
-        
-        if not is_superuser:
-            form.base_fields['nombre'].disabled = True
-        return form
-
 class PeliculaInline(admin.TabularInline):
     model = Pelicula
     extra = 0

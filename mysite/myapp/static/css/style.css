@@ -14,11 +14,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
     line-height: 1em;
-    color: #ffffff 
+    color: #fff 
 }
 
 .bodyLightMode {
-    background: #ffffff;
+    background: #fff;
     color: #121212
 }
 
@@ -70,7 +70,7 @@ ol {
 
 #footer {
     background: url(images/footer-tail.gif) repeat-x left top #1f1f1f; 
-    color: #ffffff; 
+    color: #fff; 
     font-size: .86em;
     line-height: 1.667em;
     text-align: center
@@ -308,7 +308,7 @@ p {
 
 /* TXT, LINKS, LINES, TITLES */
 a {
-    color: #e1e1e1;
+    color: #fff;
     outline: none
 }
 

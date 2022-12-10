@@ -4,8 +4,8 @@ window.onload = function () {
 
     var enableLightMode = () => {
         document.body.classList.add('bodyLightMode');
-        document.getElementById("footer").classList.add('footerLightMode');
-        const collection1 = document.getElementsByTagName("a");
+        document.getElementById('footer').classList.add('footerLightMode');
+        const collection1 = document.getElementsByTagName('a');
         Array.from(collection1).forEach(function(item) {
             item.classList.add('aLightMode')
         });
@@ -15,8 +15,8 @@ window.onload = function () {
 
     var disableLightMode = () => {
         document.body.classList.remove('bodyLightMode');
-        document.getElementById("footer").classList.remove('footerLightMode');
-        const collection1 = document.getElementsByTagName("a");
+        document.getElementById('footer').classList.remove('footerLightMode');
+        const collection1 = document.getElementsByTagName('a');
         Array.from(collection1).forEach(function(item) {
             item.classList.remove('aLightMode')
         });
@@ -40,6 +40,6 @@ window.onload = function () {
 /* $(document).ready(function(){
     $('#ldmode').click(function(){
     var element = document.body;
-    element.classList.toggle("dark"); 
+    element.classList.toggle('dark'); 
     });
 }); */    

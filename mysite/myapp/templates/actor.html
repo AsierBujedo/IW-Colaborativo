@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | Actor {{ actor.id }}</title>
-</head>
+{% block title %}DeustoCines | Actor {{ actor.id }}{% endblock title %}
 
-<body>
+{% block ul %}
+    <li><a href="/myapp/">Home</a></li>
+    <li><a href="/myapp/cines">Cines</a></li>
+    <li><a href="/myapp/salas">Salas</a></li>
+    <li><a href="/myapp/peliculas" class="active">Películas</a></li>
+{% endblock ul %}
+
+{% block body %}
     <p><strong>ID:</strong> {{ actor.id }}&nbsp&nbsp<strong>Nombre:</strong> {{ actor.nombre }}&nbsp&nbsp<strong>Fecha de nacimiento:</strong> {{ actor.fecha_nto }}</p>
-</body>
-</html>
+{% endblock body %}

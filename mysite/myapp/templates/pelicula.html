@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | {{ pelicula.titulo }}</title>
-</head>
+{% block title %}DeustoCines | {{ pelicula.titulo }}{% endblock title %}
 
-<body>
+{% block ul %}
+    <li><a href="/myapp/">Home</a></li>
+    <li><a href="/myapp/cines">Cines</a></li>
+    <li><a href="/myapp/salas">Salas</a></li>
+    <li><a href="/myapp/peliculas" class="active">Películas</a></li>
+{% endblock ul %}
+
+{% block body %}
     <p><strong>ID:</strong> {{ pelicula.id }}&nbsp&nbsp<strong>Título:</strong> {{ pelicula.titulo }}&nbsp&nbsp<strong>Fecha de estreno:</strong> {{ pelicula.fecha_estreno }}&nbsp&nbsp<strong>Longitud en minutos:</strong> {{ pelicula.longitud_mins }}&nbsp&nbsp<strong>Director:</strong> <a href="/myapp/directores/{{ pelicula.id_director.id }}">{{ pelicula.id_director.nombre }}</a></p>
     <h3>Actores que participan:</h3>
     <ul>
-        {% for actor in actores_in_pelicula %}
+        {% for actor in pelicula.actores.all %}
             <li>
                 <p><a href="/myapp/actores/{{ actor.id }}">{{ actor.nombre }}</a></p>
             </li>
@@ -18,11 +21,10 @@
     </ul>
     <h3>Cines en los que se proyecta:</h3>
     <ul>
-        {% for cine in cines %}
+        {% for sala in pelicula.salas.all %}
             <li>
-                <p>{{ cine.nombre }}</p>
+                <p>{% ifchanged %} {{ sala.id_cine.nombre }} {% endifchanged %}</p>
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock body %}

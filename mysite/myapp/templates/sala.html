@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | {{ sala.cod_sala }} ({{ sala.id_cine.nombre }})</title>
-</head>
+{% block title %}DeustoCines | {{ sala.cod_sala }} ({{ sala.id_cine.nombre }}){% endblock title %}
 
-<body>
+{% block ul %}
+    <li><a href="/myapp/">Home</a></li>
+    <li><a href="/myapp/cines">Cines</a></li>
+    <li><a href="/myapp/salas" class="active">Salas</a></li>
+    <li><a href="/myapp/peliculas">Películas</a></li>
+{% endblock ul %}
+
+{% block body %}
     <p><strong>ID:</strong> {{ sala.id }}&nbsp&nbsp<strong>Número:</strong> {{ sala.cod_sala }}&nbsp&nbsp<strong>Número de asientos:</strong> {{ sala.num_asientos }}&nbsp&nbsp<strong>Categoría:</strong> {{ sala.categoria }}&nbsp&nbsp<strong>Cine:</strong> {{ sala.id_cine.nombre }}</p>
     <h3>Películas que se proyectan:</h3>
     <ul>
-        {% for pelicula in peliculas_in_sala %}
+        {% for pelicula in sala.peliculas.all %}
             <li>
                 <p>{{ pelicula.titulo }}</p>
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock body %}

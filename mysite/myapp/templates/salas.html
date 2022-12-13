@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | Salas</title>
-</head>
+{% block title %}DeustoCines | Salas{% endblock title %}
 
-<body>
-    <h2>Lista completa de salas:</h2>
-    <ul>
-        {% for sala in salas %}
-            <li>
-                <a href="/myapp/salas/{{ sala.id }}">{{ sala.cod_sala }}, {{ sala.id_cine.nombre }}</a>
-            </li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% block ul %}
+    <li><a href="/myapp/">Home</a></li>
+    <li><a href="/myapp/cines">Cines</a></li>
+    <li><a href="/myapp/salas" class="active">Salas</a></li>
+    <li><a href="/myapp/peliculas">Películas</a></li>
+{% endblock ul %}
+
+{% block body %}
+<h2>Lista completa de salas:</h2>
+<ul>
+    {% for sala in sala_list %}
+        <li>
+            <a href="/myapp/salas/{{ sala.id }}">{{ sala.cod_sala }}, {{ sala.id_cine.nombre }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock body %}

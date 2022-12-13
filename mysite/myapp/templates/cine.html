@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
+{%extends "base.html"%}
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DeustoCines | {{ cine.nombre }}</title>
-</head>
+{%block title%}DeustoCines | {{ cine.nombre }}{%endblock title%}
 
-<body>
+{% block ul %}
+    <li><a href="/myapp/">Home</a></li>
+    <li><a href="/myapp/cines" class="active">Cines</a></li>
+    <li><a href="/myapp/salas">Salas</a></li>
+    <li><a href="/myapp/peliculas">Películas</a></li>
+{% endblock ul %}
+
+{%block body%}
     <p><strong>ID:</strong> {{ cine.id }}&nbsp&nbsp<strong>Nombre:</strong> {{ cine.nombre }}&nbsp&nbsp<strong>Dirección:</strong> {{ cine.direccion }}&nbsp&nbsp<strong>Teléfono:</strong> {{ cine.telefono }}&nbsp&nbsp<strong>Número de salas:</strong> {{ cine.num_salas }}</p>
     <h3>Salas:</h3>
     <ul>
-        {% for sala in salas %}
+        {% for sala in cine.salas.all %}
             <li>
                 <p>{{ sala.cod_sala }}</p>
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{%endblock body%}
